@@ -1,0 +1,289 @@
+
+.carrosselTitulo {
+    color: rgb(231, 169, 53);
+    background-color: var(--branco);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0.5em 0 0.5em 0;   
+    
+}
+
+.containerTituloNoticias a {
+    text-decoration: none;
+    /*color: rgb(247, 174, 40);*/
+    color:rgb(231, 169, 53);
+    background-color: transparent;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0.5em 0 0.5em 0;
+ 
+
+}
+
+.containerTituloNoticias a:hover {
+    color: rgb(138, 91, 5);
+}
+
+.containerTituloNoticias  {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(99, 93, 93);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 1em 0 1em 0;
+    margin: 1em;
+
+}
+
+.containerCaixa {
+    color: gray;
+    
+}
+
+.containerPrincipal {
+    background-color:rgb(99, 93, 93);
+
+}
+
+
+.descriçãoImagem {
+    width: 20%;
+}
+
+
+.containerImagemNoticia1 {
+    text-align: center;
+    width: 100%;
+}
+
+.containerImagemNoticia2 {
+    text-align: center;
+    width: 100%;
+}
+
+.containerImagemNoticia3 {
+    text-align: center;
+    width: 100%;
+}
+
+.carrosselTituloLinks a {
+    
+    color: rgb(99, 93, 93);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+} 
+
+.carrosselTituloLinks a:hover {
+    color: rgb(62, 60, 60);
+}
+
+.carrosselTituloLinks {
+ 
+    background-color: transparent;
+    text-align: center;
+
+
+}
+
+.carrosselTituloLinks a {
+    color: white;
+}    
+
+.descriçãoImagemBloqueado {
+    width: 40%;
+    
+}
+
+.textoBloqueado {
+    align-items: start;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-button-prev, 
+.swiper-button-next {
+    display: none;
+}
+
+.swiper-pagination {
+    position: initial;
+    margin: .5em 0;
+}
+
+.cardDescrição {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+
+}
+
+.cardDescriçãoLinks {
+    text-decoration: none;
+
+    
+}
+
+.cardBotões {
+    display: flex;
+    justify-content: left;
+}
+
+.botões {
+    display: flex;
+}
+
+.card {
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+}
+
+.cardLinks {
+    /*background: rgb(99, 93, 93);*/
+    background: rgb(231, 169, 53);
+    margin: 1em;
+    padding: 0.7em;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.cardLinks hover{
+    color: gray;
+
+}    
+
+.descriçãoTituloAzul {
+    color: blue;
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.descriçãoTituloAmarelo {
+    color: yellow;
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.descriçãoTituloVerde {
+    color: green;
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.descriçãoTituloVermelho {
+    color: red;
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.descriçãoTituloLivro {
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0.5em 0;
+}
+
+.descriçãoTituloNoticia a {
+    color: rgb(63, 54, 54);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0.5em 0;
+    text-decoration: none; 
+}
+
+.descriçãoTituloNoticia a:hover{
+    color: rgb(138, 91, 5);
+}
+
+.descriçãoTexto {
+    font-size: 15px;
+    font-family: var(fontePrincipal);
+    font-weight: 500;
+}
+
+.botõesItem {
+    margin: 0 0.5em;
+}
+
+.botõesAncora {
+    background-color:  rgb(99, 93, 93);
+    padding: 0.4em 1em;
+    color: var(--branco);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.botõesAncora a:hover {
+    color: purple;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .carrosselTitulo {
+        font-size: 26px;
+    }
+
+    .swiper-pagination {
+        margin: 2em 3em 0;
+    }
+    
+    .swiper {
+        width: 60%;
+    }
+
+    .swiper-button-prev, 
+    .swiper-button-next {
+        display: block;
+        top: 60%;
+    }
+
+    .card {
+        width: 40%;
+        margin: 2em auto;
+    } 
+}
+
+@media screen and (min-width: 1728px) {
+    .carrosselContainer {
+        display: flex;
+        margin: 0 20vw 3em 20vw;
+        align-items: center;
+    }
+
+    .swiper-pagination {
+        margin: 1em 0;
+    }
+
+    .swiper {
+        width: 50%;
+    }
+
+    .descriçãoTitulo {
+        font-size: 32px;
+    }
+
+    .descriçãoTexto {
+        font-size: 16px;
+    }
+
+    .descrição {
+        margin-right: 2em;
+    }
+
+    .card {
+        width: 60%;
+        margin-left: 3em;
+    }
+}

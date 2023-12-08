@@ -1,0 +1,121 @@
+.cabeçalho {
+     background-color: var(--branco);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     position: relative;
+ }
+ 
+ .container {
+     display: flex;
+     align-items: center;
+ }
+ 
+ .containerImagem {
+     padding: 1em;
+     width: 50px;
+     height: 50px;
+ }
+
+.containerTitulo {
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+}
+ 
+ 
+ @media screen and (min-width: 1024px) {
+     .containerTitulo {
+         font-weight: 700;
+         font-size: 30px;
+         text-align: center;
+     }
+ 
+     .containerTitulo {
+         font-weight: 400;
+ 
+         .containerTituloNegrito {
+             font-weight: 700;
+         }
+     }
+ 
+     .opções {
+         display: flex;
+     }
+ 
+     .opçõesItem {
+         padding: 0 1em;
+         text-transform: uppercase;
+     }
+ 
+     .opçõesLink {
+         text-decoration: none;
+         color: var(--preto);
+     }
+ 
+     .containerImagemTransparente {
+         display: none;
+     }
+ 
+     .cabeçalhoMenuHamburguer {
+         display: none;
+     }
+ 
+     .opçõesBotão:checked ~.listaMenu {
+         display:block;
+         width: auto;
+     }
+ 
+     .opçõesBotão {
+         display: none;
+     }
+ 
+     .opçõesBotão:checked~.opçõesRótulo>.opçõesItem {
+         background: var(--azulDegrade);
+         color: var(--branco);
+     }
+ 
+     .opçõesItem {
+         padding: 2em 1em;
+     }
+ 
+     .listaMenuItem:hover {
+         background: var(--azulDegrade);
+     }
+ 
+     .listaMenuItem:hover>.listaMenuLink {
+         -webkit-text-fill-color: var(--branco);
+         text-decoration: none;
+     }
+ }
+ 
+ 
+ @media screen and (min-width: 1728px) {
+     .containerLink {
+         display: flex;
+         align-items: center;
+         text-decoration: none;
+         color: var(--preto);
+     }
+
+     .containerTitulo {
+        font-weight: 700;
+        font-size: 30px;
+        text-align: center;
+    }
+ 
+     .cabeçalho {
+         padding: 0 2em;
+     }
+ 
+     .opções {
+         margin-right: auto;
+     }
+ 
+     .containerTexto {
+         display: block;
+     }
+ 
+ }
+ 
+ 

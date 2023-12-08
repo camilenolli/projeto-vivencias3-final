@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <link rel="shortcut icon" type="imagex/png" href="img/lixeiraLaranja.ico">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Paraíso Limpo</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+   
+    </head>
+
+<body>
+    <div class="quiz-container">
+        <h1 class="quiz-container-titulo">Quiz</h1>
+    </div>    
+
+        <!-- Pergunta 1 -->
+        <section class="teste1">
+            <div class="question">
+                <p>1. Qual é o material que pode ser reciclado?</p>
+                <br>
+                <ul class="options">
+                    <li class="option"><input type="radio" name="q1" value="a"> Plástico</li>
+                    <li class="option"><input type="radio" name="q1" value="b"> Isopor</li>
+                    <li class="option"><input type="radio" name="q1" value="c"> Papel</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Pergunta 2 -->
+        <section class="teste2">
+            <div class="question">
+                <p>2. Cite o material abaixo que não deve ser descartado na lixeira azul.</p>
+                <br>
+                <ul class="options">
+                    <li class="option"><input type="radio" name="q2" value="a"> Etiquetas e fitas adesivas</li>
+                    <li class="option"><input type="radio" name="q2" value="b"> Papel</li>
+                    <li class="option"><input type="radio" name="q2" value="c"> Papelão</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Pergunta 3 -->
+        <div class="question" id="question3">
+            <p>3. Qual o destino correto para pilhas e baterias usadas?</p>
+            <br>
+            <ul class="options">
+                <li class="option"><input type="radio" name="q3" value="a"> Compostagem</li>
+                <li class="option"><input type="radio" name="q3" value="b"> Lixo comum</li>
+                <li class="option"><input type="radio" name="q3" value="c"> Ponto de coleta específico</li>
+            </ul>
+        </div>
+
+        <!-- Pergunta 4 -->
+        <div class="question" id="question4">
+            <p>4. Porque a coleta seletiva é tão importante para a nossa sociedade?</p>
+            <br>
+            <ul class="options">
+                <li class="option"><input type="radio" name="q4" value="a"> Pois ela gera empregos em empresas.</li>
+                <li class="option"><input type="radio" name="q4" value="b"> É importante para garantirmos um menor desperdício de recursos, e também para mantermos um meio ambiente bom para ser habitado.</li>
+                <li class="option"><input type="radio" name="q4" value="c"> Para não gerar acumulo de lixo nas casas.</li>
+            </ul>
+        </div>
+
+        <!-- Pergunta 5 -->
+        <div class="question" id="question5">
+            <p>5. O que é coleta seletiva?</p>
+            <br>
+            <ul class="options">
+                <li class="option"><input type="radio" name="q5" value="a"> Descartar tudo no mesmo local</li>
+                <li class="option"><input type="radio" name="q5" value="b"> Separar materiais recicláveis do lixo comum</li>
+                <li class="option"><input type="radio" name="q5" value="c"> Queimar o lixo</li>
+            </ul>
+        </div>
+
+        <!-- Pergunta 6 -->
+        <div class="question" id="question6">
+            <p>6. Quais são os significados das lixeiras para coleta seletiva?</p>
+            <br>
+            <ul class="options">
+                <li class="option"><input type="radio" name="q6" value="a"> Amarelo para papel, Vermelho para plástico, Azul para vidro e Verde para metal</li>
+                <li class="option"><input type="radio" name="q6" value="b"> Amarelo para metal, Vermelho para plástico, Azul para papel e Verde para vidro</li>
+                <li class="option"><input type="radio" name="q6" value="c"> Amarelo para vidro, Vermelho para papel, Azul para metal e Verde para plástico</li>
+            </ul>
+        </div>
+
+        <!-- Pergunta 7 -->
+        <div class="question" id="question7">
+            <p>7. O que é possível fazer para reduzir a produção de lixo?</p>
+            <br>
+            <ul class="options">
+                <li class="option"><input type="radio" name="q7" value="a"> Comprar produtos descartáveis</li>
+                <li class="option"><input type="radio" name="q7" value="b"> Optar por produtos com menos embalagens</li>
+                <li class="option"><input type="radio" name="q7" value="c"> Descartar lixo no rio</li>
+            </ul>
+        </div>
+
+
+        <br>
+        <br>
+
+        <section class="botaoRespostas">
+            <button onclick="checkAnswers()">Verificar Respostas</button>
+        </section>
+
+        <br>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            var correctAnswers = 0;
+
+            // Verifique a resposta para a primeira pergunta
+            var answer1 = document.querySelector('input[name="q1"]:checked');
+            if (answer1 && answer1.value === "a") {
+                correctAnswers++;
+            }
+
+            // Verifique a resposta para a segunda pergunta
+            var answer2 = document.querySelector('input[name="q2"]:checked');
+            if (answer2 && answer2.value === "c") {
+                correctAnswers++;
+            }
+
+            // Verifique a resposta para a terceira pergunta
+            var answer3 = document.querySelector('input[name="q3"]:checked');
+            if (answer3 && answer3.value === "c") {
+                correctAnswers++;
+            }
+
+            // Verifique a resposta para a quarta pergunta
+            var answer4 = document.querySelector('input[name="q4"]:checked');
+            if (answer4 && answer4.value === "b") {
+                correctAnswers++;
+            }
+
+             // Verifique a resposta para a quinta pergunta
+             var answer5 = document.querySelector('input[name="q5"]:checked');
+            if (answer5 && answer5.value === "b") {
+                correctAnswers++;
+            }
+
+             // Verifique a resposta para a sexta pergunta
+             var answer6 = document.querySelector('input[name="q6"]:checked');
+            if (answer6 && answer6.value === "b") {
+                correctAnswers++;
+            }
+
+             // Verifique a resposta para a sétima pergunta
+             var answer7 = document.querySelector('input[name="q7"]:checked');
+            if (answer7 && answer7.value === "b") {
+                correctAnswers++;
+            }
+
+            // Adicione lógica semelhante para as outras perguntas conforme necessário
+
+            // Exiba a pontuação final
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "Você acertou " + correctAnswers + " de 7 perguntas.";
+        }
+        
+    </script>
+    <br>
+    <br>
+</body>
+</html>
